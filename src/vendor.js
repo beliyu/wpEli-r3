@@ -6,7 +6,6 @@ require('@angular/compiler');
 require('@angular/common');
 require('@angular/http');
 require('@angular/router');
-require('@angular/router-deprecated');
 // RxJS
 require('rxjs');
 require('script!primeui/primeui-ng-all.min.js');
