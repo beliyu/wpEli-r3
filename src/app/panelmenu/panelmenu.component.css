@@ -1,0 +1,45 @@
+.ui-pm-header {
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    zoom: 1;
+}
+.ui-pm-header.ui-state-active, .ui-pm-header.ui-state-active a {
+    border: 1px solid #156090;
+    background: #186ba0;
+    color: #FFFFFF;
+}
+
+.ui-pm-header a {
+    display: block;
+    padding: .5em .5em .5em 2.2em;
+    color: #555555;
+    text-decoration: none;
+}
+.ui-pm-header .fa {
+    position: absolute;
+    left: .5em;
+    top: 50%;
+    margin-top: -8px;
+}
+.ui-pm-content {
+    padding: .2em 0;
+    border-top: 0;
+    margin-top: -2px;
+    position: relative;
+    top: 1px;
+    overflow: auto;
+    zoom: 1;
+    outline: 0;
+}
+.ui-state-def {
+    border: 1px solid #d6d6d6;
+    background: #ffffff;
+    font-weight: 600;
+    color: #555555;
+}
+.ui-widget-content {
+     border: 1px solid #D5D5D5;
+     background: #ffffff;
+     color: #222222;
+ }

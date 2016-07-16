@@ -1,0 +1,18 @@
+
+<div  [class]="styleClass" [ngStyle]="style">
+    <div *ngFor="let item of model" class="ui-menuitem-panel">
+
+        <div tabindex="0" [ngClass]="{'ui-widget ui-pm-header ui-state-def':true,
+                    'ui-state-active':isActive(item),'ui-state-hover':(item == hoveredItem)}">
+            <span class="fa fa-fw" [ngClass]="{'fa-caret-right':!isActive(item),'fa-caret-down':isActive(item)}"></span>
+            <a [href]="item.url||'#'"  (click)="headerClick($event,item)"
+               (mouseenter)="hoveredItem=item" (mouseleave)="hoveredItem=null">
+                {{item.label}}
+            </a>
+        </div>
+        <div class="ui-pm-content ui-widget-content" [style.display]="isActive(item) ? 'block' : 'none'">
+            <panelmenuSub [item]="item" [expanded]="true"></panelmenuSub>
+        </div>
+
+    </div>
+</div>

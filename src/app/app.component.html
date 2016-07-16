@@ -1,0 +1,33 @@
+<main (window:resize)="widthAct()">
+  <div id="page-wrapper" [ngClass]="{'open': toggle}">
+    <div><img src="http://static.elitesecurity.org//es6.png"
+              width="460" height="60" border="1" >
+    </div>
+    <div id="sidebar-wrapper" >
+      <div id="sb-main">
+        <a (click)="toggleSidebar()">Forum group
+          <span class="menu-icon glyphicon glyphicon-transfer"></span>
+        </a>
+      </div>
+      <panelmenu [model]="menItems"  [style]="{'width':'200px'}"></panelmenu>
+    </div>
+    <div id="content-wrapper" class="col-md-8">
+    <div class="tb">
+      <p-toolbar>
+        <div class="ui-toolbar-group-left">
+          Zadnjih
+          <button class="btn btn-sm" type="button" (click)="naviLast(6)">6 sati</button>
+          <button class="btn btn-sm" type="button" (click)="naviLast(12)" > 12 sati</button>
+          <button class="btn btn-sm" type="button" (click)="naviLast(24)"> 24 sata</button>
+          <button class="btn btn-sm" type="button" (click)="naviLast(168)"> 7 dana </button>
+        </div>
+
+        <div class="ui-toolbar-group-right">
+          <login > Login </login>
+        </div>
+      </p-toolbar>
+    </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</main>
